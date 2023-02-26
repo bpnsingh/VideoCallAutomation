@@ -59,13 +59,13 @@ start apps
 Start Appium Server
     [Arguments]  ${phone}
     Print Message   Starting Appium Server on port ${phone.port}
-    Start Process   ${start_appium_cmd} ${phone.port}  shell=True  alias=appiumserver  stdout=${PROJECT_DIR}/tmp/appium_stdout.txt  stderr=${PROJECT_DIR}/tmp/appium_stderr.txt
+    Start Process   ${start_appium_cmd} ${phone.port}  shell=True  alias=appiumserver  stdout=${stdout_file}  stderr=${stderror_file}
     Process Should Be Running  appiumserver
     sleep  5s
 
 Stop Appium Server
     Print Message   Killing Appium server
-    Start Process  ${kill_appium_cmd}  shell=True  stdout=${PROJECT_DIR}/tmp/appium_kill_stdout.txt  stderr=${PROJECT_DIR}/tmp/appium_kill_stderr.txt
+    Start Process  ${kill_appium_cmd}  shell=True  stdout=${stdout_file}  stderr=${stderror_file}
 
 
 

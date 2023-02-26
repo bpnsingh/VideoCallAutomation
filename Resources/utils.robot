@@ -84,7 +84,7 @@ Print Message
 
 compose message with timestamp
     [Arguments]   ${msg}
-    ${time}=  Get Current Date    %H:%M:%S
+    ${time}=  Get Current Date	result_format=datetime
     log to console   ${\n}${time}***** ${msg} *****
 
 Capture Screen Recording
