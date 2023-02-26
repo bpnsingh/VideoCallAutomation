@@ -129,3 +129,8 @@ set portrait
     [Arguments]   ${device}
     Print Message   setting ${device.name} to portrait mode
     Portrait
+
+accept call with keycode
+    Press Keycode      5
+
+

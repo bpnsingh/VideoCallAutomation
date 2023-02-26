@@ -6,5 +6,7 @@ Resource        Common.robot
 Resource        utils.robot
 Resource        ../Properties/${runner}.robot
 Resource        ../Properties/Environmrnts/${setup}.robot
+Resource        whatsappScreens/callsScreen.robot
+Resource        whatsappScreens/activeCallScreen.robot
 
 
