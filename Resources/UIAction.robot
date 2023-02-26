@@ -1,11 +1,6 @@
 *** Settings ***
 Documentation   This file includes all  UI Action for this project
 Library         AppiumLibrary   timeout=20   run_on_failure=Capture Page Screenshot
-Library         ../ExternalKeywords/utils.py
-
-*** Variables ***
-&{keycode}         one=8   two=9  three=10  four=11  five=12  six=13  seven=14  eight=15
-...                nine=16  zero=7
 
 
 *** Keywords ***

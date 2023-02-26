@@ -1,8 +1,8 @@
 *** Settings ***
 Documentation   Misc Keyword for the Project
 Library         String
-Library         ../ExternalKeywords/utils.py
 Library         OperatingSystem
+Library         DateTime
 
 
 
@@ -84,7 +84,7 @@ Print Message
 
 compose message with timestamp
     [Arguments]   ${msg}
-    ${time}=  get_current_time
+    ${time}=  Get Current Date    %H:%M:%S
     log to console   ${\n}${time}***** ${msg} *****
 
 Capture Screen Recording
