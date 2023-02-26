@@ -9,9 +9,7 @@ Begin 2 Mobiles for Test
     ...               properties file.
     [Arguments]   ${device1}   ${device2}
     start apps   ${device1}
-    retry   Check login state and perform login if not already  ${first}
     start apps   ${device2}
-    retry   Check login state and perform login if not already  ${second}
 
 Launch Android App2
     [Arguments]  ${phone}
