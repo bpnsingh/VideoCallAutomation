@@ -115,10 +115,6 @@ getDeviceTime
     ${time}=  Evaluate    $appium._current_application().get_device_time()
     [Return]   ${time}
 
-Tap Clear All
-    swipe down
-    swipe down
-    Run Keyword And Ignore Error  tap id   //*[@text="Clear all"]
 
 set landscape
     [Arguments]   ${device}
