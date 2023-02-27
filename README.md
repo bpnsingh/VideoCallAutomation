@@ -1,5 +1,3 @@
-Great, here's a possible Readme document based on the information you provided:
-
 ## Whatsapp Video Call Automation
 
 # Overview
