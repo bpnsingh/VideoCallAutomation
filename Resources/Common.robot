@@ -31,10 +31,16 @@ start apps
     END
 
 Start Appium Server
-    [Arguments]  ${phone}
-    Print Message   Starting Appium Server on port ${phone.port}
-    Start Process   ${start_appium_cmd} ${phone.port}  shell=True  alias=appiumserver  stdout=${stdout_file}  stderr=${stderror_file}
-    Process Should Be Running  appiumserver
+    [Arguments]  ${phone}   ${browser}=${False}
+    Log   Starting Appium Server on port ${phone.port}
+    IF   ${browser} == ${False}
+        Start Process   ${start_appium_cmd} ${phone.port}  shell=True  alias=appiumserver  stdout=${stdout_file}  stderr=${stderror_file}
+        Process Should Be Running  appiumserver
+    ELSE
+        Print Message    starting appium server with chrome auto download
+        Start Process   ${start_appium_cmd_autodownlaod}  shell=True  alias=appiumserver  stdout=${stdout_file}  stderr=${stderror_file}
+        Process Should Be Running  appiumserver
+    END
     sleep  5s
 
 Stop Appium Server

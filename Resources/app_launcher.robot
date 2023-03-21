@@ -19,3 +19,9 @@ Launch Application On LambdaTest
          ...          platformName=android    noReset=true       deviceName=${phone.name}
          ...          unicodeKeyboard=true  resetKeyboard=true  app=${lambdatest.app}  deviceOrientation=portrait
          ...          project=DM_Android  build=${lambdatest.build}  name=${SUITE NAME}     console=true  region=US
+
+launch chrome in local device
+    [Arguments]     ${phone}
+    Start Appium Server   ${D1}   ${True}
+    Open Application    http://localhost:4723/wd/hub    platformName=${phone.platformName}   platformVersion=${phone.version}    deviceName=${phone.name}
+    ...                 browserName=chrome  autoGrantPermissions=true    chromedriverExecutableDir=${chromedriverExecutableDir}
